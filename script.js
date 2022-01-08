@@ -11,7 +11,7 @@ setInterval(() => {
     let seconds = date.getSeconds();
     let period = "AM";
 
-    if (hours > 6 || hours > 7 || hours > 8 || hours > 9 || hours > 10 || hours > 12 || hours > 13 || hours > 14 || hours > 15 || hours > 16 || hours > 17 || hours >= 18) {
+    if (hours < 6 || hours < 7 || hours < 8 || hours < 9 || hours < 10 || hours < 12 || hours < 13 || hours < 14 || hours < 15 || hours < 16 || hours < 17 || hours <= 18) {
         clock.style.backgroundImage = "url('./sun.jpg')";
     } else {
         clock.style.backgroundImage = "url('./moon.jpg')";
@@ -29,7 +29,7 @@ setInterval(() => {
         minutes = "0" + minutes;
     }
     if (seconds < 10) {
-        seconds = "0" + seconds;
+        seconds = "0" + seconds; 
     }
 
     day.textContent = `${data}`;
