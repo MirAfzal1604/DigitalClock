@@ -10,13 +10,13 @@ setInterval(() => {
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
     let period = "AM";
-
+    
     if (hours <= 6 || hours >= 18) {
-        clock.style.backgroundImage = "url('./sun.jpg')";
-    } else {
         clock.style.backgroundImage = "url('./moon.jpg')";
+    } else {
+        clock.style.backgroundImage = "url('./sun.jpg')";
     }
-
+    
     if (hours > 12) {
         period = "PM";
         hours = hours - 12;
